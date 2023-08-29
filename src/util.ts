@@ -11,4 +11,13 @@ export function slugify(str: string) {
     ).replace(/^_+|_+$/g, "");
 }
 
+export function ConvertIPToHexIP(ip: string) {
+    var vals = ip.split(".");
+    var op = ['0x'];
+    for (var i = 0; i < vals.length; i++) {
+        op.push(Number(vals[i]).toString(16));
+    }
+    return op.join("");
+}
+
 export const md5 = (str: string) => createHash("md5").update(str).digest("hex");
