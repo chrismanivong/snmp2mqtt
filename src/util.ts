@@ -11,7 +11,7 @@ export function slugify(str: string) {
     ).replace(/^_+|_+$/g, "");
 }
 
-export function ConvertIPToHexIP(ip) {
+export function ConvertIPToHexIP(ip: string) {
     var vals = ip.split(".");
     var op = ['0x'];
     for (var i = 0; i < vals.length; i++) {
